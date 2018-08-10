@@ -12,5 +12,16 @@ public class SalaryOfStaff {
         yearOfWork = scanner.nextInt();
         System.out.println("Nhập vào hệ số lương: ");
         indexOfSalary = scanner.nextInt();
+
+        //Tính lương
+        if (indexOfSalary > 1 && indexOfSalary < 5) {
+            salary = (indexOfSalary * 4000000) + (yearOfWork * 500000);
+            System.out.println("Tiền lương là: " + salary);
+        } else {
+            System.out.println("Hệ số lương không hợp lệ. Mời nhập lại( 1 <= Hệ số <=5 ): ");
+            indexOfSalary = scanner.nextInt();
+            salary = indexOfSalary * 4000000 + yearOfWork * 500000;
+            System.out.println("Tiền lương là: " + salary);
+        }
     }
 }
